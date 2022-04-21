@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <!-- We only include this to explicitly loosen the CSP of various packager environments. It does not provide any security. -->
   <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: blob:">
-  <title>暇つぶしゲーム 2.4.0</title>
+  <title>暇つぶしゲーム 2.5.0</title>
   <style>
     body {
       color: #89c3eb;
@@ -134,6 +134,9 @@
     }
     .sc-canvas {
       cursor: url(data:image/png;base64,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), auto;
+    }
+    .sc-monitor-root[opcode^="data_"] .sc-monitor-value-color {
+      background-color: #ff8c1a !important;
     }
     
   </style>
