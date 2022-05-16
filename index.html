@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <!-- We only include this to explicitly loosen the CSP of various packager environments. It does not provide any security. -->
   <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: blob:">
-  <title>暇つぶしゲームＳ - 3.1.2</title>
+  <title>暇つぶしゲームＳ - 3.2.0</title>
   <style>
     body {
       color: #89c3eb;
@@ -223,13 +223,13 @@
       {const providers = {};
 providers.local = new Scaffolding.Cloud.LocalStorageProvider("cloudvariables:HimatsubushiGameS v3.1.2");
 for (const provider of Object.values(providers)) scaffolding.addCloudProvider(provider);
-scaffolding.addCloudProviderOverride("☁ 超上級", providers["local"] || null);
-scaffolding.addCloudProviderOverride("☁ 所持コイン", providers["local"] || null);
-scaffolding.addCloudProviderOverride("☁ 所持ｱﾋﾞﾘﾃｨｶｰﾄﾞ", providers["local"] || null);
 scaffolding.addCloudProviderOverride("☁ ハイスコア【いつも】S 3.1.2", providers["local"] || null);
 scaffolding.addCloudProviderOverride("☁ ハイスコア【タイム】S 3.1.2", providers["local"] || null);
 scaffolding.addCloudProviderOverride("☁ ハイスコア【スコア】S 3.1.2", providers["local"] || null);
 scaffolding.addCloudProviderOverride("☁ ハイスコア【タイム（計算用）】S 3.1.2", providers["local"] || null);
+scaffolding.addCloudProviderOverride("☁ 超上級", providers["local"] || null);
+scaffolding.addCloudProviderOverride("☁ 所持コイン", providers["local"] || null);
+scaffolding.addCloudProviderOverride("☁ 所持ｱﾋﾞﾘﾃｨｶｰﾄﾞ", providers["local"] || null);
 };
 
       if (document.fullscreenEnabled || document.webkitFullscreenEnabled) {
