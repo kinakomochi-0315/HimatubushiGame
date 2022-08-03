@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <!-- We only include this to explicitly loosen the CSP of various packager environments. It does not provide any security. -->
   <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: blob:">
-  <title>暇つぶしゲームＳ - 3.5.5</title>
+  <title>暇つぶしゲームＳ - 3.5.6</title>
   <style>
     body {
       color: #89c3eb;
@@ -230,22 +230,22 @@
 providers.local = new Scaffolding.Cloud.LocalStorageProvider("cloudvariables:HimatsubushiGameS v3.5.0");
 providers.ws = new Scaffolding.Cloud.WebSocketProvider(["wss://clouddata.turbowarp.org","wss://clouddata.turbowarp.xyz"], "HimatsubushiGameS v3.5.0");
 for (const provider of Object.values(providers)) scaffolding.addCloudProvider(provider);
+scaffolding.addCloudProviderOverride("☁ ハイスコア【タイム（計算用）】", providers["local"] || null);
 scaffolding.addCloudProviderOverride("☁ ハイスコア【いつも】", providers["local"] || null);
 scaffolding.addCloudProviderOverride("☁ ハイスコア【タイム】", providers["local"] || null);
 scaffolding.addCloudProviderOverride("☁ ハイスコア【スコア】", providers["local"] || null);
-scaffolding.addCloudProviderOverride("☁ ハイスコア【タイム（計算用）】", providers["local"] || null);
 scaffolding.addCloudProviderOverride("☁ 超上級", providers["local"] || null);
 scaffolding.addCloudProviderOverride("☁ 所持コイン", providers["local"] || null);
 scaffolding.addCloudProviderOverride("☁ 所持ｱﾋﾞﾘﾃｨｶｰﾄﾞ", providers["local"] || null);
-scaffolding.addCloudProviderOverride("☁ 初プレイフラグ", providers["local"] || null);
-scaffolding.addCloudProviderOverride("☁ Wハイスコア【タイム（計算用）】", providers["ws"] || null);
 scaffolding.addCloudProviderOverride("☁ プレゼントもらった？", providers["local"] || null);
+scaffolding.addCloudProviderOverride("☁ 初プレイフラグ", providers["local"] || null);
+scaffolding.addCloudProviderOverride("☁ ログインボーナス取った？", providers["local"] || null);
+scaffolding.addCloudProviderOverride("☁ マイユーザーネーム", providers["local"] || null);
+scaffolding.addCloudProviderOverride("☁ Wハイスコア【タイム（計算用）】", providers["ws"] || null);
 scaffolding.addCloudProviderOverride("☁ トータル暇つぶっシャー数", providers["ws"] || null);
 scaffolding.addCloudProviderOverride("☁ Wハイスコア【いつも】", providers["ws"] || null);
 scaffolding.addCloudProviderOverride("☁ Wハイスコア【スコア】", providers["ws"] || null);
 scaffolding.addCloudProviderOverride("☁ Wハイスコア【タイム】", providers["ws"] || null);
-scaffolding.addCloudProviderOverride("☁ ログインボーナス取った？", providers["local"] || null);
-scaffolding.addCloudProviderOverride("☁ マイユーザーネーム", providers["local"] || null);
 };
 
       if (document.fullscreenEnabled || document.webkitFullscreenEnabled) {
